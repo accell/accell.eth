@@ -1,0 +1,81 @@
+const colors = require('tailwindcss/colors');
+const defaultTheme = require('tailwindcss/defaultTheme');
+
+module.exports = {
+  mode: 'jit',
+  purge: {
+    content: [
+      './index.html',
+      './resources/**/*.{html,svg,vue,js}',
+    ],
+  },
+  darkMode: 'media',
+  theme: {
+    extend: {
+      colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
+        lighten: {
+          '50':  'rgba(255,255,255,0.05)',
+          '100': 'rgba(255,255,255,0.10)',
+          '200': 'rgba(255,255,255,0.20)',
+          '300': 'rgba(255,255,255,0.30)',
+          '400': 'rgba(255,255,255,0.40)',
+          '500': 'rgba(255,255,255,0.50)',
+          '600': 'rgba(255,255,255,0.60)',
+          '700': 'rgba(255,255,255,0.70)',
+          '800': 'rgba(255,255,255,0.80)',
+          '900': 'rgba(255,255,255,0.90)',
+        },
+        darken: {
+          '50':  'rgba(0,0,0,0.05)',
+          '100': 'rgba(0,0,0,0.10)',
+          '200': 'rgba(0,0,0,0.20)',
+          '300': 'rgba(0,0,0,0.30)',
+          '400': 'rgba(0,0,0,0.40)',
+          '500': 'rgba(0,0,0,0.50)',
+          '600': 'rgba(0,0,0,0.60)',
+          '700': 'rgba(0,0,0,0.70)',
+          '800': 'rgba(0,0,0,0.80)',
+          '900': 'rgba(0,0,0,0.90)',
+        },
+        black: colors.black,
+        white: colors.white,
+        blueGray: colors.blueGray,
+        coolGray: colors.coolGray,
+        gray: colors.gray,
+        trueGray: colors.trueGray,
+        warmGray: colors.warmGray,
+        red: colors.red,
+        orange: colors.orange,
+        amber: colors.amber,
+        yellow: colors.yellow,
+        lime: colors.lime,
+        green: colors.green,
+        emerald: colors.emerald,
+        teal: colors.teal,
+        cyan: colors.cyan,
+        sky: colors.sky,
+        blue: colors.blue,
+        indigo: colors.indigo,
+        violet: colors.violet,
+        purple: colors.purple,
+        fuchsia: colors.fuchsia,
+        pink: colors.pink,
+        rose: colors.rose,
+        brown: colors.brown,
+      },
+      container: {
+        center: true,
+      },
+      screens: {
+        'xs': '375px',
+        ...defaultTheme.screens,
+      },
+    },
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+};

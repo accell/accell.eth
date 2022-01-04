@@ -1,0 +1,42 @@
+{
+  "private": true,
+  "browserslist": [
+    "extends @shopify/browserslist-config"
+  ],
+  "engines": {
+    "node": ">=12.14.0"
+  },
+  "scripts": {
+    "build": "mix",
+    "build:production": "mix --production",
+    "start": "mix watch",
+    "hot": "mix watch --hot",
+    "test": "npm run lint",
+    "lint": "npm run lint:js",
+    "lint:js": "eslint resources/scripts",
+    "lint:css": "stylelint \"resources/**/*.{css,scss,vue}\""
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@shopify/browserslist-config": "^3.0.0",
+    "autoprefixer": "^10.3.5",
+    "babel-eslint": "^10.1.0",
+    "browser-sync": "^2.27.5",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.24.2",
+    "filename-regex": "^2.0.1",
+    "laravel-mix": "^6.0.31",
+    "mix-html-builder": "^0.8.0",
+    "postcss": "^8.3.7",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.1.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
+    "tailwindcss": "^2.2.15",
+    "webpack": "^5.54.0"
+  },
+  "dependencies": {
+    "alpinejs": "^3.7.1"
+  }
+}
