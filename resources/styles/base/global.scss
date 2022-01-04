@@ -37,12 +37,12 @@ button[disabled] {
   align-items: center;
   justify-content: center;
   text-indent: -9999px;
-  background-image: url('/images/bg.png');
+  background-image: url('../images/bg.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
   &:active {
-    background-image: url('/images/bg-active.png');
+    background-image: url('../images/bg-active.png');
   }
 }
