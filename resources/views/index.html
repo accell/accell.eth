@@ -2,16 +2,27 @@
 <html class="text-white bg-gray-200 js-focus-visible" lang="en-us">
   <head>
     <title>accell.eth</title>
-    <include src="meta.html"></include>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="description" content="accell.eth but it's a website">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="preload" href="./styles/app.css" as="style" />
+    <link rel="preload" href="./scripts/app.js" as="script">
+    <link rel="stylesheet" href="./styles/app.css">
   </head>
 
   <body class="min-h-screen">
-    <extends src="app.html">
-      <block name="content">
-        <include src="main.html"></include>
-      </block>
-    </extends>
+    <div id="app" role="application">
+      <main id="main">
+        <section class="flex h-screen w-screen items-center justify-center" x-data>
+          <button id="eye" x-on:click="alert('hey')">click le spooky eye</button>
+        </section>
+      </main>
+    </div>
 
-    <include src="scripts.html"></include>
+    <script src="./scripts/app.js" defer></script>
   </body>
 </html>

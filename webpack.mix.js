@@ -1,16 +1,4 @@
 const mix = require('laravel-mix');
-require('mix-html-builder');
-
-/*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Sage application. By default, we are compiling the Sass file
- | for your application, as well as bundling up your JS files.
- |
- */
 
 mix
   .setPublicPath('./public')
@@ -34,23 +22,7 @@ mix
   .copyDirectory('resources/images', 'public/images');
 
 mix
-  .html({
-    output: '.',
-    htmlRoot: './resources/views/index.html',
-    layoutRoot: './resources/views/layouts',
-    partialRoot: './resources/views/partials',
-    minify: {
-      collapseBooleanAttributes: true,
-      collapseWhitespace: true,
-      minifyCSS: true,
-      minifyJS: true,
-      removeComments: true,
-      removeRedundantAttributes: true,
-      removeScriptTypeAttributes: true,
-      removeStyleLinkTypeAttributes: true,
-      useShortDoctype: true,
-    },
-  });
+  .copy('resources/views/index.html', 'public');
 
 mix
   .sourceMaps()
